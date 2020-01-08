@@ -1,0 +1,1150 @@
+            html,
+            body,
+            div,
+            span,
+            applet,
+            object,
+            iframe,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote,
+            pre,
+            a,
+            abbr,
+            acronym,
+            address,
+            big,
+            cite,
+            code,
+            del,
+            dfn,
+            em,
+            img,
+            ins,
+            kbd,
+            q,
+            s,
+            samp,
+            small,
+            strike,
+            strong,
+            sub,
+            sup,
+            tt,
+            var,
+            b,
+            u,
+            i,
+            center,
+            dl,
+            dt,
+            dd,
+            ol,
+            ul,
+            li,
+            fieldset,
+            form,
+            label,
+            legend,
+            table,
+            caption,
+            tbody,
+            tfoot,
+            thead,
+            tr,
+            th,
+            td,
+            article,
+            aside,
+            canvas,
+            details,
+            embed,
+            figure,
+            figcaption,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            output,
+            ruby,
+            section,
+            summary,
+            time,
+            mark,
+            audio,
+            video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                box-sizing: border-box;
+            }
+            /* HTML5 display-role reset for older browsers */
+            
+            article,
+            aside,
+            details,
+            figcaption,
+            figure,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            section {
+                display: block;
+            }
+            
+            body {
+                line-height: 1;
+            }
+            
+            ol,
+            ul {
+                list-style: none;
+            }
+            
+            blockquote,
+            q {
+                quotes: none;
+            }
+            
+            blockquote:before,
+            blockquote:after,
+            q:before,
+            q:after {
+                content: '';
+                content: none;
+            }
+            
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('fonts/Montserrat/Montserrat-Bold.ttf');
+            }
+            
+            @font-face {
+                font-family: 'Montserrat extra';
+                src: url('fonts/Montserrat/Montserrat-ExtraBold.ttf');
+            }
+            
+            @font-face {
+                font-family: 'Montserrat light';
+                src: url('fonts/Montserrat/Montserrat-Light.ttf');
+            }
+            
+            @font-face {
+                font-family: 'Work Sans';
+                src: url('fonts/Work_Sans/WorkSans-Medium.ttf');
+            }
+            
+            @font-face {
+                font-family: 'Leckerli One';
+                src: url('fonts/Leckerli_One/LeckerliOne-Regular.ttf');
+            }
+            
+            @font-face {
+                font-family: 'Myriad Pro Regular';
+                src: url('fonts/MyriadPro-Regular.woff');
+            }
+            
+            @font-face {
+                font-family: 'Cambay';
+                src: url('fonts/Cambay/Cambay-Regular.ttf');
+            }
+            
+            @font-face {
+                font-family: 'Coustard', serif;
+                src: url('fonts/Coustard/Coustard-Regular.ttf');
+            }
+            
+            $break-small: 400px;
+            $break-large: 1920px;
+            $information-phone: " screen and (max-width : 600px)";
+            $information-middle: " screen and (max-width : 1200px)";
+            .main-container {
+                width: 100%;
+                max-width: 1920px;
+                margin: 0 auto;
+                height: 100%;
+                min-width: 960px;
+                .header-bg-image {
+                    background-image: url(image/header-bg-image.png);
+                    min-height: 1080px;
+                    height: 100%;
+                    background-color: #252525;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    @media #{$information-phone} {
+                        background-position: 66% 0;
+                    }
+                    .header-line {
+                        padding-top: 50px;
+                        width: 60%;
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        .logo-img {
+                            a {
+                                text-decoration: none;
+                                font-size: 36pt;
+                                font-weight: 800;
+                                color: white;
+                                font-family: 'Montserrat', sans-serif;
+                            }
+                        }
+                        .main-nav li {
+                            list-style-type: none;
+                            display: inline-block;
+                            margin-left: 20px;
+                            @media #{$information-phone} {
+                                display: block;
+                                padding-top: 3%;
+                            }
+                            a {
+                                font-size: 18pt;
+                                color: white;
+                                text-decoration: none;
+                                font-family: 'Work Sans', sans-serif;
+                                &:active {
+                                    color: #8799a3;
+                                }
+                            }
+                        }
+                        .button-buy-it {
+                            button {
+                                width: 150px;
+                                height: 35px;
+                                color: #ffff00;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 14pt;
+                                border-radius: 25px;
+                                border: 2px solid #ffff00;
+                                box-shadow: 0 0 5px 2px;
+                                background-color: transparent;
+                                font-stretch: normal;
+                                @media #{$information-phone} {
+                                    margin-top: 50px;
+                                    display: block;
+                                }
+                            }
+                        }
+                        @media #{$information-phone} {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                    .intro {
+                        width: 60%;
+                        min-width: 400px;
+                        max-width: 700px;
+                        height: 50%;
+                        margin: 20% 0 0 20%;
+                        @media #{$information-phone} {
+                            width: 100%;
+                            height: auto;
+                            margin: 5% 0 0 3%;
+                        }
+                        .slogan {
+                            height: 450px;
+                            p {
+                                margin-top: 5px;
+                            }
+                            .hi-there {
+                                font-family: 'Leckerli One', cursive;
+                                font-size: 36px;
+                                color: #ffffff;
+                            }
+                            .my-name {
+                                font-family: 'Montserrat extra', sans-serif;
+                                font-size: 45pt;
+                                color: white;
+                                span {
+                                    color: rgb(9, 70, 184);
+                                }
+                            }
+                            .i-am {
+                                font-family: 'Montserrat light';
+                                color: white;
+                                font-size: 40pt;
+                            }
+                            .claritas {
+                                color: #636363;
+                                font-size: 24pt;
+                                font-family: 'Myriad Pro Regular';
+                            }
+                            button {
+                                margin-top: 20px;
+                                width: 160px;
+                                height: 50px;
+                                color: white;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 14pt;
+                                background-color: #2b2b2b;
+                                border-radius: 25px;
+                                border: 2px solid #2b2b2b;
+                            }
+                        }
+                    }
+                }
+                .main-box {
+                    color: white;
+                    .about-me-bgcolor {
+                        height: auto;
+                        background-color: #0081ff;
+                        min-height: 530px;
+                        .about-me {
+                            padding: 5% 0;
+                            max-width: 1150px;
+                            margin: 0 auto;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            @media #{$information-middle} {
+                                flex-direction: column;
+                                width: 100%;
+                                padding: 3% 3%;
+                            }
+                            @media #{$information-phone} {
+                                flex-direction: column;
+                                margin: 0 0 0 1%;
+                                width: 100%;
+                            }
+                            .about-me-text {
+                                font-family: 'Leckerli One';
+                                font-size: 36pt;
+                            }
+                            .investigation-text {
+                                width: auto;
+                                padding-right: 20px;
+                                font-family: 'Montserrat extra', sans-serif;
+                                font-size: 42pt;
+                                @media #{$information-phone} {
+                                    font-size: 22pt;
+                                }
+                            }
+                            .qestigationes {
+                                padding-top: 10%;
+                                width: auto;
+                                font-family: 'Cambay', sans-serif;
+                                font-size: 20pt;
+                            }
+                        }
+                    }
+                    .services-bg-color {
+                        height: auto;
+                        background-color: #0578eb;
+                        min-height: 300px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0 auto;
+                        .services {
+                            max-width: 1150px;
+                            margin: 0 auto;
+                            display: flex;
+                            flex-direction: row;
+                            padding: 0 3%;
+                            @media #{$information-phone} {
+                                flex-direction: column;
+                                width: 100%;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                            }
+                            div img {
+                                width: auto;
+                                height: auto;
+                                margin-right: 20px;
+                            }
+                            .left-services,
+                            .centre-services,
+                            .right-services {
+                                display: flex;
+                                flex-direction: row;
+                                width: 33%;
+                                @media #{$information-phone},
+                                #{$information-middle} {
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                }
+                                div p {
+                                    width: auto;
+                                }
+                                div .caption {
+                                    font-family: 'Montserrat extra';
+                                    font-size: 24pt;
+                                    margin-bottom: 10px;
+                                }
+                                div .text {
+                                    font-family: 'Cambay', sans-serif;
+                                    font-size: 18pt;
+                                }
+                            }
+                        }
+                    }
+                    .social-networks-bgcolor {
+                        color: white;
+                        background-color: #0081ff;
+                        .social-networks {
+                            max-width: 1150px;
+                            margin: 0 auto;
+                            padding: 0 3%;
+                            min-height: 250px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            p {
+                                font-family: 'Cambay', sans-serif;
+                                font-size: 20pt;
+                                margin-right: 100px;
+                            }
+                            .social-networks-list {
+                                ul {
+                                    list-style-type: none;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    @media #{$information-phone},
+                                    #{$information-middle} {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        flex-direction: row;
+                                        align-items: baseline;
+                                    }
+                                    li {
+                                        padding-left: 20px;
+                                        a img {
+                                            max-width: 31px;
+                                            max-height: 20px;
+                                            &:hover {
+                                                filter: brightness(0%);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .potrfolio-bg-color {
+                        width: 100%;
+                        max-height: 1080px;
+                        background-color: #fff;
+                        margin: 0 auto;
+                        .view-all-projects {
+                            min-height: 300px;
+                            padding: 0 3%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            @media #{$information-phone} {
+                                flex-direction: column;
+                            }
+                            .portfolio-text {
+                                width: 70%;
+                                @media #{$information-phone} {
+                                    width: 100%;
+                                    text-align: center;
+                                }
+                                p {
+                                    &:first-child {
+                                        font-family: 'Leckerli One';
+                                        font-size: 36pt;
+                                        color: #8799a3;
+                                    }
+                                    &:last-child {
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 42pt;
+                                        color: black;
+                                    }
+                                }
+                            }
+                            .button button {
+                                color: white;
+                                background-color: lightseagreen;
+                                box-shadow: 0 14px 28px lightseagreen, 0 10px 10px lightseagreen;
+                                text-decoration: none;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 14pt;
+                                font-weight: bold;
+                                min-width: 250px;
+                                min-height: 55px;
+                                border-radius: 25px;
+                            }
+                        }
+                        .all-project {
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            max-width: 1920px;
+                            height: 100%;
+                            background-color: white;
+                            display: flex;
+                            flex-direction: row;
+                            margin: 0 auto;
+                            .img-hover {
+                                display: none;
+                                height: 300px;
+                                width: 480px;
+                                opacity: 50%;
+                                background-image: url(image/hover-for-calendar.png);
+                                .interfaces-text {
+                                    font-family: 'Cambay';
+                                    font-size: 16pt;
+                                    text-align: center;
+                                    padding-top: 100px;
+                                }
+                                .socialister-text {
+                                    font-family: 'Montserrat extra';
+                                    font-size: 20pt;
+                                    text-align: center;
+                                }
+                                .chain {
+                                    margin-left: 45%;
+                                    img {
+                                        &:nth-child(2) {
+                                            padding-left: 22px;
+                                        }
+                                    }
+                                }
+                            }
+                            @media screen and(max-width: 1919px) {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: center;
+                                background-color: white;
+                                background-size: contain;
+                                height: 100%;
+                                width: 100%;
+                                margin: 0 auto;
+                                max-width: 1920px;
+                                min-height: 1500px;
+                            }
+                            .left {
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                max-width: 960px;
+                                .macbook {
+                                    background-repeat: no-repeat;
+                                    width: 100%;
+                                    max-width: 960px;
+                                    height: 480px;
+                                    background-image: url(image/macbook.png);
+                                    background-position: 0px -225px;
+                                }
+                                .pen-cal {
+                                    display: flex;
+                                    flex-direction: row;
+                                    .pencil {
+                                        background-repeat: no-repeat;
+                                        width: 100%;
+                                        max-width: 480px;
+                                        height: 300px;
+                                        background-image: url(image/pencil.png);
+                                        background-position: 0px -400px;
+                                    }
+                                    .calendar {
+                                        background-repeat: no-repeat;
+                                        width: 100%;
+                                        max-width: 480px;
+                                        height: 300px;
+                                        background-color: white;
+                                        background-image: url(image/calendar.png);
+                                        background-position: -123px -77px;
+                                        &:hover .img-hover {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                            .right {
+                                display: flex;
+                                flex-direction: row;
+                                width: 100%;
+                                max-width: 960px;
+                                .bajeck {
+                                    background-repeat: no-repeat;
+                                    width: 100%;
+                                    max-width: 480px;
+                                    height: 780px;
+                                    background-image: url(image/bajeck.png);
+                                    background-position: -123px -44px;
+                                }
+                                .bo-pho {
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    max-width: 480px;
+                                    .book {
+                                        background-repeat: no-repeat;
+                                        width: 100%;
+                                        max-width: 480px;
+                                        height: 480px;
+                                        background-image: url(image/book.png);
+                                        background-position: -70px -46px;
+                                    }
+                                    .phone {
+                                        width: 100%;
+                                        max-width: 480px;
+                                        height: 300px;
+                                        background-image: url(image/phone.png);
+                                        background-position: 0px -350px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .clients {
+                        position: relative;
+                        width: 100%;
+                        max-width: 1920px;
+                        height: auto;
+                        color: white;
+                        background-color: #e1e1e1;
+                        background-image: url(image/clients-bg-color.png);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        @media screen and (max-width: 1919px) {
+                            margin-top: 780px;
+                        }
+                        .left-arrow {
+                            position: absolute;
+                            top: 49%;
+                            left: 200px;
+                        }
+                        .right-arrow {
+                            position: absolute;
+                            top: 49%;
+                            right: 200px;
+                        }
+                        .quotes {
+                            position: absolute;
+                            top: 400px;
+                            left: 49%;
+                            font-size: 150pt;
+                            opacity: 40%;
+                            color: #e1e1e1;
+                            font-family: 'Coustard', serif;
+                        }
+                        .header-text {
+                            text-align: center;
+                            padding-top: 200px;
+                            .client {
+                                font-family: 'Leckerli One';
+                                font-size: 36pt;
+                            }
+                            .what {
+                                padding-top: 40px;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 42pt;
+                            }
+                            .investigationes {
+                                padding-top: 70px;
+                                font-family: 'Coustard', serif;
+                                font-size: 24pt;
+                                margin-left: auto;
+                            }
+                            .foto-whith-name {
+                                padding-top: 35px;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                div {
+                                    margin-left: 20px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                    p {
+                                        font-family: 'Cambay';
+                                        font-size: 16pt;
+                                        opacity: 40%;
+                                        &:first-child {
+                                            color: #ffff00;
+                                            font-family: 'Montserrat', sans-serif;
+                                            font-size: 18pt;
+                                            opacity: 100%;
+                                        }
+                                    }
+                                }
+                                img {
+                                    width: 60px;
+                                    height: 60px;
+                                    border-radius: 50%;
+                                    background-size: cover;
+                                }
+                            }
+                        }
+                        .slider {
+                            padding-top: 100px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            div {
+                                margin-left: 100px;
+                            }
+                        }
+                    }
+                    .blog-bg-color {
+                        width: 100%;
+                        max-width: 1920px;
+                        height: 100%;
+                        background-color: white;
+                        .blog {
+                            padding: 90px 0;
+                            max-width: 1150px;
+                            margin: 0 auto;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            @media screen and(max-width: 1200px) {
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            .left-part {
+                                width: 100%;
+                                max-width: 550px;
+                                @media screen and(max-width: 1200px) {
+                                    max-width: 100%;
+                                    text-align: center;
+                                }
+                                .txt-content {
+                                    font-family: 'Leckerli One';
+                                    font-size: 36pt;
+                                    color: #8799a3;
+                                    width: 100%;
+                                    .st-video-flex {
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                        @media screen and(max-width: 1200px) {
+                                            flex-direction: row;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                            padding-bottom: 4%;
+                                        }
+                                    }
+                                    p {
+                                        &:nth-child(2) {
+                                            font-family: 'Montserrat', sans-serif;
+                                            font-size: 42pt;
+                                            color: #252525;
+                                        }
+                                        &:nth-child(3) {
+                                            font-family: 'Cambay';
+                                            font-size: 24pt;
+                                            color: #636363;
+                                            padding: 6.5% 0 7%;
+                                        }
+                                    }
+                                    .quote-post-format {
+                                        height: 300px;
+                                        background-color: #007efa;
+                                        box-shadow: 50px 0px 50px 0px rgba(0, 0, 0, 0.15);
+                                        p {
+                                            color: white;
+                                            text-align: center;
+                                            &:first-child {
+                                                font-family: 'Montserrat-ExtraBold', sans-serif;
+                                                font-size: 16pt;
+                                                padding-top: 35px;
+                                            }
+                                            &:nth-child(2) {
+                                                font-family: 'Coustard', serif;
+                                                font-size: 26pt;
+                                                padding-top: 25px
+                                            }
+                                            &:last-child {
+                                                font-family: 'Cambay';
+                                                color: #ffff00;
+                                                font-size: 18pt;
+                                                padding-top: 25px;
+                                            }
+                                        }
+                                    }
+                                    .standard-post-format {
+                                        margin-top: 40px;
+                                        box-shadow: 40px 0px 40px 0px rgba(0, 0, 0, 0.15);
+                                        width: 46%;
+                                        height: auto;
+                                        min-height: 260px;
+                                        background-image: url(image/standard-post-format.png);
+                                        p {
+                                            font-family: 'Montserrat-ExtraBold', sans-serif;
+                                            &:first-child {
+                                                font-size: 16pt;
+                                                color: #bbc7cd;
+                                            }
+                                            &:last-child {
+                                                font-size: 24pt;
+                                                color: #252525;
+                                                font-weight: bold;
+                                            }
+                                        }
+                                    }
+                                    .video {
+                                        width: 46%;
+                                        height: auto;
+                                        min-height: 260px;
+                                        margin-top: 40px;
+                                        box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.15);
+                                        .img-hover {
+                                            padding-top: 50px;
+                                            display: none;
+                                            p {
+                                                color: white;
+                                                text-align: center;
+                                                opacity: 60%;
+                                                padding-bottom: 10px;
+                                                &:first-child {
+                                                    font-family: 'Montserrat-ExtraBold', sans-serif;
+                                                    font-size: 16pt;
+                                                }
+                                                &:nth-child(2) {
+                                                    font-family: 'Montserrat', sans-serif;
+                                                    font-size: 24pt;
+                                                }
+                                            }
+                                        }
+                                        background-image: url(image/video.png);
+                                        &:hover .img-hover {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                            .right-part {
+                                width: 100%;
+                                max-width: 550px;
+                                margin: 0 auto;
+                                @media screen and(max-width: 1200px) {
+                                    max-width: 100%;
+                                    text-align: center;
+                                }
+                                .gallery-post-format {
+                                    width: 100%;
+                                    height: 600px;
+                                    background-image: url(image/half-face.png);
+                                    p {
+                                        text-align: left;
+                                        color: white;
+                                        margin-left: 95px;
+                                        padding-top: 50px;
+                                        font-family: 'Cambay';
+                                        font-size: 18pt;
+                                        &:first-child {
+                                            font-family: 'Montserrat', sans-serif;
+                                            font-size: 20pt;
+                                            color: #8799a3;
+                                        }
+                                        &:nth-child(even) {
+                                            font-family: 'Montserrat', sans-serif;
+                                            font-size: 24pt;
+                                        }
+                                        &:last-of-type {
+                                            width: 430px;
+                                        }
+                                    }
+                                    button {
+                                        width: 150px;
+                                        height: 50px;
+                                        color: black;
+                                        background-color: #f0f009;
+                                        border: none;
+                                        display: block;
+                                        border-radius: 44px;
+                                        margin-left: 95px;
+                                        margin-top: 50px;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14pt;
+                                    }
+                                    .slider-button {
+                                        display: flex;
+                                        flex-direction: row;
+                                        padding-top: 50px;
+                                        padding-left: 125px;
+                                        div {
+                                            img {
+                                                top: 40px;
+                                                left: 95px;
+                                                margin-left: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .st-po-for-flex {
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: flex-start;
+                                    .standard-post-format {
+                                        width: 80%;
+                                        height: auto;
+                                        min-height: 260px;
+                                        margin-top: 40px;
+                                        margin-right: 6%;
+                                        box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.15);
+                                        p {
+                                            color: black;
+                                            &:first-of-type {
+                                                color: #bbc7cd;
+                                                font-family: 'Montserrat extra';
+                                                font-size: 16pt;
+                                                padding-top: 2%;
+                                            }
+                                            &:nth-of-type(2) {
+                                                color: black;
+                                                font-family: 'Montserrat', sans-serif;
+                                                font-size: 24pt;
+                                                padding-top: 2%;
+                                            }
+                                            &:last-of-type {
+                                                color: #636363;
+                                                font-family: 'Cambay';
+                                                font-size: 18pt;
+                                                padding-top: 2%;
+                                            }
+                                        }
+                                    }
+                                    .view-all-posts {
+                                        margin-top: 40px;
+                                        box-shadow: 5px -10px 40px 10px rgba(0, 0, 0, 0.15);
+                                        width: 20%;
+                                        background-color: #e91d62;
+                                        height: auto;
+                                        min-height: 260px;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: 14pt;
+                                        p {
+                                            padding-top: 100px;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .contacts-bg-color {
+                        span {
+                            color: white;
+                        }
+                        width: 100%;
+                        max-width: 1920px;
+                        height:100%;
+                        min-height: 1080px;
+                        background-color: #252525;
+                        background-image: url(image/contacts-bg-image1.png),
+                        url(image/contacts-bg-image.png);
+                        opacity: 90%;
+                        .contacts-color {
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(38, 38, 38, 0.9);
+                            .contacts {
+                                width: 100%;
+                                max-width: 1150px;
+                                margin: 0 auto;
+                                height: auto;
+                                .left-right-flex {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    align-items: flex-start;
+                                    @media screen and (max-width: 1200px) {
+                                        flex-direction: column;
+                                        justify-content: space-around;
+                                        align-items: center;
+                                    }
+                                    .left-part {
+                                        padding-top: 200px;
+                                        width: 100%;
+                                        max-width: 550px;
+                                        @media screen and (max-width: 1200px) {
+                                            max-width: 100%;
+                                            text-align: center;
+                                        }
+                                        p {
+                                            color: #636363;
+                                            font-family: 'Cambay';
+                                            font-size: 20pt;
+                                            padding-top: 35px;
+                                            &:first-of-type {
+                                                color: white;
+                                                font-family: 'Montserrat extra';
+                                                font-size: 36pt;
+                                            }
+                                            &:nth-of-type(2) {
+                                                color: white;
+                                                font-family: 'Montserrat', sans-serif;
+                                                font-size: 42pt;
+                                            }
+                                            a {
+                                                color: #007efa;
+                                            }
+                                        }
+                                        .social-networks-list ul {
+                                            list-style-type: none;
+                                            display: flex;
+                                            flex-direction: row;
+                                            justify-content: flex-start;
+                                            align-items: flex-start;
+                                            @media screen and (max-width: 1200px) {
+                                                justify-content: center;
+                                                align-items: center;
+                                            }
+                                            li {
+                                                margin-left: 20px;
+                                                a img {
+                                                    width: 22px;
+                                                    height: 14px;
+                                                    &:hover {
+                                                        filter: brightness(0%);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .right-part {
+                                        padding-top: 300px;
+                                        width: 100%;
+                                        max-width: 550px;
+                                        text-align: center;
+                                        @media screen and (max-width: 1200px) {
+                                            max-width: 100%;
+                                            text-align: center;
+                                        }
+                                        p {
+                                            color: #636363;
+                                            font-family: 'Cambay';
+                                            font-size: 20pt;
+                                            padding-top: 35px;
+                                            &:first-of-type {
+                                                color: white;
+                                                font-family: 'Montserrat', sans-serif;
+                                                font-size: 42pt;
+                                            }
+                                        }
+                                        input {
+                                            display: inline-block;
+                                            width: 40%;
+                                            height: 40px;
+                                            border-radius: 44px;
+                                            border: 3px solid #636363;
+                                            background-color: black;
+                                            padding-left: 20px;
+                                            margin-left: 5px;
+                                            margin-top: 55px;
+                                            &:first-of-type {
+                                                &:hover {
+                                                    border-color: black;
+                                                }
+                                            }
+                                            &:last-of-type {
+                                                border: 3px solid rgb(54, 53, 53);
+                                                background-color: rgba(38, 38, 38, 0.9);
+                                                color: #636363;
+                                                &:hover {
+                                                    background-color: #fff;
+                                                    border-color: black;
+                                                }
+                                            }
+                                        }
+                                        form {
+                                            margin-top: 60px;
+                                            textarea {
+                                                padding-top: 20px;
+                                                padding-left: 20px;
+                                                font-family: 'Cambay';
+                                                font-size: 14pt;
+                                                width: 85.5%;
+                                                height: 150px;
+                                                border-radius: 10px;
+                                                border: 3px solid rgb(54, 53, 53);
+                                                background-color: rgba(38, 38, 38, 0.9);
+                                                color: #636363;
+                                                resize: none;
+                                            }
+                                        }
+                                        button {
+                                            display: block;
+                                            width: 29%;
+                                            height: 50px;
+                                            margin-top: 100px;
+                                            margin-left: 5%;
+                                            background-color: #007efa;
+                                            color: white;
+                                            font-family: 'Montserrat', sans-serif;
+                                            font-size: 14pt;
+                                            border: none;
+                                            border-radius: 44px;
+                                            text-transform: uppercase;
+                                            box-shadow: 0px 0px 10px 3px rgba(0, 126, 250, 0.3);
+                                            &:hover {
+                                                background-color: black;
+                                            }
+                                        }
+                                    }
+                                }
+                                .footer {
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    height: 118px;
+                                    .albedo {
+                                        width: 100%;
+                                        margin-top: 30px;
+                                        font-family: 'Cambay';
+                                        font-size: 14pt;
+                                        color: #636363;
+                                    }
+                                    .back-to {
+                                        width: 120px;
+                                        margin-top: 30px;
+                                        a {
+                                            display: inline-block;
+                                            font-family: 'Cambay';
+                                            font-size: 14pt;
+                                            color: #636363;
+                                            text-decoration: none;
+                                        }
+                                        img {
+                                            float: right;
+                                            padding-top: 8px;
+                                            &:hover {
+                                                filter: brightness(0%);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
